@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+html, body {
+    background-color: #000000;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.p6 {
+    font-size: 48px;
+    position: relative;
+    z-index: 2;
+    font-family: "Press Start 2P";
+    color: #ffffff;
+}
+
+.p6-block{
+    margin-top: 20%;
+}
