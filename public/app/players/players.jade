@@ -1,0 +1,7 @@
+.container
+    .media(ng-repeat="player in playerList")
+        a.pull-left(href="#")
+            img.media-object(width="64px",height="64px", src='{{player.img}}', alt='')
+        .media-body
+            h4.media-heading {{player.name}}
+            |     {{player.description}}
