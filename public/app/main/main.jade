@@ -5,5 +5,11 @@
     .row
         h1.p6.text-center Players 6
     .row
-        h1.p6.text-center
-            small {{dateLeft.days}} Days, {{dateLeft.hours}} Hours, {{dateLeft.minutes}} Minutes, {{dateLeft.seconds}} Seconds
+        h1.p6-time.col-xs-3.text-center {{dateLeft.days}}
+            small  Days
+        h1.p6-time.col-xs-3.text-center {{dateLeft.hours}}
+            small  Hours
+        h1.p6-time.col-xs-3.text-center {{dateLeft.minutes}}
+            small  Minutes
+        h1.p6-time.col-xs-3.text-center {{dateLeft.seconds}}
+            small  Seconds

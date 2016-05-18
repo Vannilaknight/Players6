@@ -18,6 +18,14 @@ html, body {
     color: #ffffff;
 }
 
+.p6-time{
+    font-size: 28px;
+    position: relative;
+    z-index: 2;
+    font-family: "Press Start 2P";
+    color: #ffffff;
+}
+
 .p6-block{
     margin-top: 20%;
 }
