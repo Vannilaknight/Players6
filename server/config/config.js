@@ -1,6 +1,7 @@
 var path = require('path');
 var rootPath = path.normalize(__dirname + '/../../');
 
+
 module.exports = {
   development: {
     db: 'mongodb://admin:pass@ds011810.mlab.com:11810/players6',
