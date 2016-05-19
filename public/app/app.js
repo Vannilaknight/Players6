@@ -1,4 +1,4 @@
-angular.module('app', ['ngResource', 'ngRoute']);
+angular.module('app', ['ngResource', 'ngRoute', 'ngAnimate']);
 
 angular.module('app').config(function ($routeProvider, $locationProvider) {
     var routeRoleChecks = {
@@ -24,17 +24,25 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
             templateUrl: '/partials/admin/user-list',
             controller: 'userListCtrl', resolve: routeRoleChecks.admin
         })
+        .when('/aboutUs', {
+            templateUrl: '/partials/main/aboutUs',
+            controller: 'aboutUsCtrl'
+        })
+        .when('/login', {
+            templateUrl: '/partials/account/login',
+            controller: 'loginCtrl'
+        })
         .when('/signup', {
             templateUrl: '/partials/account/signup',
-            controller: 'signupCtrl'
+            controller: 'signupCtrl', resolve: routeRoleChecks.admin
         })
         .when('/profile', {
             templateUrl: '/partials/account/profile',
-            controller: 'profileCtrl', resolve: routeRoleChecks.user
+            controller: 'profileCtrl', resolve: routeRoleChecks.admin
         })
         .when('/players', {
             templateUrl: '/partials/players/players',
-            controller: 'playersCtrl'
+            controller: 'playersCtrl', resolve: routeRoleChecks.admin
         })
 
 });

@@ -1,4 +1,4 @@
-angular.module('app').controller('navBarLoginCtrl', function ($scope, $http, Identity, Notifier, Auth, $location) {
+angular.module('app').controller('loginCtrl', function ($scope, $http, Identity, Notifier, Auth, $location) {
     $scope.identity = Identity;
     $scope.signin = function (username, password) {
         Auth.authenticateUser(username, password).then(function (success) {
@@ -8,7 +8,7 @@ angular.module('app').controller('navBarLoginCtrl', function ($scope, $http, Ide
                 Notifier.notify('Username/Password combination incorrect');
             }
         });
-    }
+    };
 
     $scope.signout = function () {
         Auth.logoutUser().then(function () {

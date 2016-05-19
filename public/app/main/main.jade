@@ -1,15 +1,15 @@
-#stars
-#stars2
-#stars3
-.col-xs-12.p6-block
-    .row
-        h1.p6.text-center Players 6
-    .row
-        h1.p6-time.col-xs-3.text-center {{dateLeft.days}}
-            small  Days
-        h1.p6-time.col-xs-3.text-center {{dateLeft.hours}}
-            small  Hours
-        h1.p6-time.col-xs-3.text-center {{dateLeft.minutes}}
-            small  Minutes
-        h1.p6-time.col-xs-3.text-center {{dateLeft.seconds}}
-            small  Seconds
+.container-fluid
+    .col-xs-12.col-md-6.col-md-offset-3.p6-block
+        .row
+            h1.p6.text-center Players 6
+        .row
+            h1.p6-time.col-xs-3.text-center {{dateLeft.days}}
+                small  D
+            h1.p6-time.col-xs-3.text-center {{dateLeft.hours}}
+                small  H
+            h1.p6-time.col-xs-3.text-center {{dateLeft.minutes}}
+                small  M
+            h1.p6-time.col-xs-3.text-center {{dateLeft.seconds}}
+                small  S
+        .row
+            a.p6-link.col-xs-12.text-center(href="/aboutUs") What is this?

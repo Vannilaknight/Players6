@@ -1,0 +1,5 @@
+form.form-signin.col-xs-6.col-xs-offset-3(role='form')
+    h2.form-signin-heading.text-primary Admin Login
+    input.form-control(placeholder='Email address', required='', autofocus='', type='text', ng-model="username")
+    input.form-control(placeholder='Password', required='', type='password', ng-model="password")
+    button.btn.btn-lg.btn-primary(type='submit', ng-click="signin(username, password)") Sign in
