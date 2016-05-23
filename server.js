@@ -12,7 +12,7 @@ login({email: "players6bot@gmail.com", password: "Sonic365"}, function callback(
     if (err) return console.error(err);
 
     if(process.env.NODE_ENV == 'production'){
-        api.sendMessage('Website has been updated', 457789894432164);
+        api.sendMessage('Website has been updated\n-Until then', 457789894432164);
     }
 
     api.listen(function callback(err, message) {
