@@ -28,6 +28,10 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
             templateUrl: '/partials/main/aboutUs',
             controller: 'aboutUsCtrl'
         })
+      .when('/home', {
+        templateUrl: '/partials/main/home',
+        controller: 'homeCtrl'
+      })
         .when('/login', {
             templateUrl: '/partials/account/login',
             controller: 'loginCtrl'

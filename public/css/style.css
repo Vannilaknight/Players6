@@ -1,13 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
 html, body {
-    background-color: #000000;
+   background: transparent;
+    color: #d8d8d8;
 }
 
 .vcenter {
     display: inline-block;
     vertical-align: middle;
     float: none;
+}
+
+.p6-font{
+    font-family: "Press Start 2P";
 }
 
 .p6 {
