@@ -16,7 +16,7 @@ angular.module('app').controller('mainCtrl', function ($scope, $rootScope, $inte
   }
 
   var countTime;
-  var endDate = new Date("June 1, 2016 11:00:00");
+  var endDate = new Date("June 1, 2016 17:00:00");
 
   countTime = $interval(function () {
     $rootScope.dateLeft = getTimeRemaining(endDate)
