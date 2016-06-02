@@ -12,26 +12,18 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
                 return Auth.authorizeAuthenticatedUserForRoute()
             }
         }
-    }
+    };
 
     $locationProvider.html5Mode(true);
     $routeProvider
         .when('/', {
-            templateUrl: '/partials/main/main',
-            controller: 'mainCtrl'
+            templateUrl: '/partials/main/home',
+            controller: 'homeCtrl'
         })
         .when('/admin/users', {
             templateUrl: '/partials/admin/user-list',
             controller: 'userListCtrl', resolve: routeRoleChecks.admin
         })
-        .when('/aboutUs', {
-            templateUrl: '/partials/main/aboutUs',
-            controller: 'aboutUsCtrl'
-        })
-      .when('/home', {
-        templateUrl: '/partials/main/home',
-        controller: 'homeCtrl'
-      })
         .when('/login', {
             templateUrl: '/partials/account/login',
             controller: 'loginCtrl'

@@ -13,7 +13,7 @@ var jasper;
 login({email: config.jasperConfig.user, password: config.jasperConfig.pass}, function callback(err, api) {
   if (err) return console.error(err);
 
-  api.sendMessage("Players,\nMy Creator is a smart fellow and cannot for the life of him submit working code. Please bare with me while he tries to, as the teenagers say, \"Get his shit together.\"\n-Until Then", config.jasperConfig.thread);
+  api.sendMessage("Players,\nCountdown has been removed from the site. My Creator is working on getting the website to always display the most current video.\n-Until Then", config.jasperConfig.thread);
 
   jasper = require('./server/config/jasper')(api, config);
 

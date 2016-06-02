@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
+
+html{
+    background: #000;
+}
+
 html, body {
    background: transparent;
     color: #d8d8d8;
