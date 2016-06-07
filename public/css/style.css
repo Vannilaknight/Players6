@@ -1,13 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
-
-html{
-    background: #000;
+html {
+    background: #FFFEFC;
 }
 
 html, body {
-   background: transparent;
-    color: #d8d8d8;
+    background: transparent;
+    color: #2E3233;
 }
 
 .vcenter {
@@ -16,7 +15,16 @@ html, body {
     float: none;
 }
 
-.p6-font{
+.navbar-default {
+    background: none;
+    border: none;
+}
+
+.navbar-brand {
+    height: auto;
+}
+
+.p6-font {
     font-family: "Press Start 2P";
 }
 
@@ -25,18 +33,18 @@ html, body {
     position: relative;
     z-index: 2;
     font-family: "Press Start 2P";
-    color: #ffffff;
+    color: #2E3233;
 }
 
-.p6-time{
+.p6-time {
     font-size: 24px;
     position: relative;
     z-index: 2;
     font-family: "Press Start 2P";
-    color: #ffffff;
+    color: #2E3233;
 }
 
-.about-box{
+.about-box {
     margin-top: 10%;
 }
 
@@ -45,7 +53,7 @@ html, body {
     position: relative;
     z-index: 2;
     font-family: "Press Start 2P";
-    color: #ffffff;
+    color: #2E3233;
 }
 
 .p6-desc {
@@ -53,37 +61,84 @@ html, body {
     position: relative;
     z-index: 2;
     font-family: "Press Start 2P";
-    color: #bebebe;
+    color: #515B5E;
+}
+
+.p6-social {
+    color: #ff622d;
+    font-size: 24px;
+}
+
+a, a > span {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+}
+
+a:before, a:after, a > span:before, a > span:after {
+    content: '';
+    position: absolute;
+    transition: transform .5s ease;
 }
 
 .p6-link {
-    color: #80beff;
-    position: relative;
-    z-index: 2;
+    color: #ff622d;
+    background: -webkit-linear-gradient(0deg, #ff2f2f, #ff7b2c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-link:before {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: -webkit-linear-gradient(0deg, #ff2f2f, #ff7b2c);
+    transform: scaleX(0);
+}
+
+.nav-link:hover:before {
+    transform: scaleX(1);
 }
 
 .p6-link:hover {
-    position: relative;
-    z-index: 2;
+    background: -webkit-linear-gradient(0deg, #ff7b2c, #ff2f2f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transition: background 2s;
+    -moz-transition: background 2s;
+    -ms-transition: background 2s;
+    -o-transition: background 2s;
+    transition: background 2s;
 }
 
 .p6-link:active {
-    color: #bababa;
-    position: relative;
-    z-index: 2;
+    background: -webkit-linear-gradient(0deg, #ff2f2f, #ff7b2c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .p6-link:visited {
-    color: #80beff;
-    position: relative;
-    z-index: 2;
+    background: -webkit-linear-gradient(0deg, #ff2f2f, #ff7b2c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.p6-link {
-    position: relative;
-    z-index: 2;
-}
-
-.p6-block{
+.p6-block {
     margin-top: 20%;
+}
+
+.p6-line {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: block;
+    border: none;
+    color: white;
+    height: 1px;
+    background: black;
+    background: -webkit-linear-gradient(0deg, #ff2f2f, #ff7b2c);
+}
+
+.youtube-highlight {
+    margin: 15px 0px;
 }

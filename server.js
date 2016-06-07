@@ -13,7 +13,7 @@ var jasper;
 login({email: config.jasperConfig.user, password: config.jasperConfig.pass}, function callback(err, api) {
   if (err) return console.error(err);
 
-  api.sendMessage("Players,\nCountdown has been removed from the site. My Creator is working on getting the website to always display the most current video.\n-Until Then", config.jasperConfig.thread);
+  api.sendMessage("Players,\nWebsite has been updated. Please inform my creator of any ideas. This is a very basic change to keep things simple. Currently there are no images because my creator does not have access to his resources.\n\nhttp://players6.com\n\n-Until Then", config.jasperConfig.thread);
 
   jasper = require('./server/config/jasper')(api, config);
 

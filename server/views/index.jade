@@ -1,22 +1,25 @@
 extends ../includes/layout
 
 block main-content
-    .stars
-    .twinkling
-    nav.navbar.navbar-inverse
+    nav.navbar.navbar-default
         .container-fluid
             .navbar-header
                 button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
                     span.icon-bar
                     span.icon-bar
                     span.icon-bar
-                a.navbar-brand.p6-font(href='#') Players: 6
+                a.navbar-brand.p6-font(href='/') Players: 6
             #myNavbar.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li.active
+                        a.p6-link.nav-link(href='/players') Players
+                    li
+                        a.p6-link.nav-link(href='/aboutUs') About
                 ul.nav.navbar-nav.navbar-right
                     li
-                        a(href='https://twitter.com/Players6_Actual')
-                            i.fa.fa-twitter(aria-hidden='true')
+                        a.p6-social.nav-link(href='https://www.youtube.com/channel/UCjug0bQtWqtKERXudtdAPNA')
+                            i.p6-link.fa.fa-youtube
                     li
-                        a(href='https://www.youtube.com/channel/UCjug0bQtWqtKERXudtdAPNA')
-                            i.fa.fa-youtube(aria-hidden='true')
+                        a.p6-social.nav-link(href='https://twitter.com/Players6_Actual')
+                            i.p6-link.fa.fa-twitter(aria-hidden='true')
     div.view(ng-view)
