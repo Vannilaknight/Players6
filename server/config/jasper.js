@@ -16,16 +16,18 @@ module.exports = function (api, config) {
               if (command[3] == 'as' || command[3] == 'by') {
                 var newIdentity = body.split(" ").splice(-1)[0];
                 identifier.changeIdentity(event.senderID, newIdentity);
-                api.sendMessage(identifier.getIdentity(event.senderID) + ",\n" + formalitator.formalitate("I will now address you as " + newIdentity), config.jasperConfig.thread);
+                api.sendMessage(identifier.getIdentity(event.senderID) + ",\n" + formalitator.formalitate("I will now address you as " + newIdentity), event.threadID);
               }
             }
+          } else {
+            api.sendMessage(identifier.getIdentity(event.senderID) + ",\nI am unfamiliar with that request.", event.threadID);
           }
         } else if (body == 'who am i' || body == 'who am i?') {
-          api.sendMessage(responsinator.responsinate('player', event.senderID), config.jasperConfig.thread);
+          api.sendMessage(responsinator.responsinate('player', event.senderID), event.threadID);
         } else if (body.includes('who are we')) {
-          api.sendMessage(responsinator.responsinate('we'), config.jasperConfig.thread);
+          api.sendMessage(responsinator.responsinate('we'), event.threadID);
         } else if (body.includes('who are you jasper')) {
-          api.sendMessage(responsinator.responsinate('you'), config.jasperConfig.thread);
+          api.sendMessage(responsinator.responsinate('you'), event.threadID);
         }
         api.markAsRead(event.threadID, function (err) {
           if (err) console.log(err);
