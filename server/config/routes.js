@@ -1,13 +1,17 @@
 var auth = require('./auth'),
   users = require('../controllers/users'),
-  mongoose = require('mongoose'),
-  User = mongoose.model('User');
+  players = require('../controllers/players'),
+  mongoose = require('mongoose');
 
 module.exports = function (app, jasper) {
 
   app.get('/api/users', auth.requiresRole('admin'), users.getUsers);
   app.post('/api/users', users.createUser);
   app.put('/api/users', users.updateUser);
+
+  app.get('/api/players', players.getPlayers);
+  app.post('/api/createPlayer', players.createPlayer);
+  app.post('/api/updatePlayer', players.updatePlayer);
 
   app.get('/jasper/off', function (req, res) {
     jasper();

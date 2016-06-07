@@ -15,10 +15,6 @@ login({email: config.jasperConfig.user, password: config.jasperConfig.pass}, fun
 
   //api.sendMessage("Players,\nWebsite added minor bios to the players. Just in case.\n\nhttp://players6.com\n\n-Until Then", config.jasperConfig.thread);
 
-  jasper = require('./server/config/jasper')(api, config);
-
-  console.log(jasper);
-
   require('./server/config/express')(app, config);
 
   require('./server/config/mongoose')(config);
@@ -26,6 +22,8 @@ login({email: config.jasperConfig.user, password: config.jasperConfig.pass}, fun
   require('./server/config/passport')();
 
   require('./server/config/routes')(app, jasper);
+
+  jasper = require('./server/config/jasper')(api, config);
 
   app.listen(config.port);
   console.log('Listening on port ' + config.port + '...');

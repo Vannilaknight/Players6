@@ -1,1 +1,34 @@
-{"identities":[{"1137788625":{"identity":"Sass-Master","name":"Mark"}},{"100000127136305":{"identity":"overlord","name":"Taylor"}},{"100000927173690":{"identity":"Lord","name":"Ambrose"}},{"100000387873118":{"identity":"Emperor","name":"Eric"}},{"100000439693569":{"identity":"Queen","name":"Braydon"}}]}
+{
+  "identities": [
+    {
+      "1137788625": {
+        "identity": "Sass-Master",
+        "name": "Mark"
+      }
+    },
+    {
+      "100000127136305": {
+        "identity": "overlord",
+        "name": "Taylor"
+      }
+    },
+    {
+      "100000927173690": {
+        "identity": "Lord",
+        "name": "Ambrose"
+      }
+    },
+    {
+      "100000387873118": {
+        "identity": "Emperor",
+        "name": "Eric"
+      }
+    },
+    {
+      "100000439693569": {
+        "identity": "Queen",
+        "name": "Braydon"
+      }
+    }
+  ]
+}
