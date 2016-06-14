@@ -1,7 +1,8 @@
 var auth = require('./auth'),
   users = require('../controllers/users'),
   players = require('../controllers/players'),
-  mongoose = require('mongoose');
+  mongoose = require('mongoose'),
+  Youtube = require('youtube-node');
 
 module.exports = function (app, jasper) {
 
@@ -16,6 +17,20 @@ module.exports = function (app, jasper) {
   app.get('/jasper/off', function (req, res) {
     jasper();
     res.send();
+  });
+
+  app.get('/youtube/videos', function(req, res){
+    var youtube = new Youtube();
+    youtube.setKey("AIzaSyCgPzEOYKHojKJBeKhom0whM_DGghfH-XM");
+
+    youtube.getPlayListsItemsById('PLC4oNb3kGg2cneTofKKRoPh9IxT180oYC', function(error, result) {
+      if (error) {
+        console.log(error);
+      }
+      else {
+        res.json(result);
+      }
+    });
   });
 
   app.get('/partials/*', function (req, res) {

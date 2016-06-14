@@ -13,7 +13,7 @@ var jasper;
 login({email: config.jasperConfig.user, password: config.jasperConfig.pass}, function callback(err, api) {
   if (err) return console.error(err);
 
-  //api.sendMessage("Players,\nWebsite added minor bios to the players. Just in case.\n\nhttp://players6.com\n\n-Until Then", config.jasperConfig.thread);
+  api.sendMessage("Players,\nWebsite is live as well as I.\n\nhttp://players6.com\n\n-Until Then", config.jasperConfig.thread);
 
   require('./server/config/express')(app, config);
 

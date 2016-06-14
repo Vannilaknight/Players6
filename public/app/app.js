@@ -41,8 +41,8 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
       controller: 'profileCtrl', resolve: routeRoleChecks.admin
     })
     .when('/players', {
-      templateUrl: '/partials/players/players',
-      controller: 'playersCtrl'
+      templateUrl: '/partials/main/underConstruction',
+      controller: 'underConstructionCtrl'
     })
 
 });
