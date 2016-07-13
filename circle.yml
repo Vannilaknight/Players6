@@ -1,0 +1,14 @@
+machine:
+  timezone:
+    America/Denver
+  node:
+    version: 6.2.2
+deployment:
+  staging:
+    branch: master
+    commands:
+      - ./bin/deploy.sh dev $DEV_USER $DEV_HOST $DEV_KEY
+  # production:
+  #   tag: /v.*/
+  #   commands:
+  #     -

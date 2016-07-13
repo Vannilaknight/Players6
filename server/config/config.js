@@ -1,35 +1,39 @@
-var path = require('path');
-var rootPath = path.normalize(__dirname + '/../../');
+'use strict';
 
-String.prototype.capitalizeFirstLetter = function() {
-  return this.charAt(0).toUpperCase() + this.slice(1);
+let path = require('path');
+
+let utils = require('../utilities/utils');
+let rootPath = path.normalize(__dirname + '/../../');
+
+function isEnv(e) {
+  return process.env.NODE_ENV === e;
 }
 
-module.exports = {
-  development: {
-    db: 'mongodb://admin:pass@ds011810.mlab.com:11810/players6',
-    rootPath: rootPath,
-    port: process.env.PORT || 3030,
-    jasperConfig: {
-      thread: 100000127136305,
-      user: 'players6bot@gmail.com',
-      pass: 'Sonic365'
-    }
-  },
-  production: {
-    rootPath: rootPath,
-    db: 'mongodb://admin:pass@ds011810.mlab.com:11810/players6',
-    port: process.env.PORT || 80,
-    jasperConfig: {
-      thread: 457789894432164,
-      user: 'players6bot@gmail.com',
-      pass: 'Sonic365'
-    }
+function createKey(name) {
+  return `CLOSIT_UI_${name.toUpperCase()}`;
+}
+
+function setEnv(name, defaultValue, override) {
+  let key = createKey(name);
+  if (override)
+    process.env[key] = defaultValue;
+  else
+    process.env[key] = process.env[key] || defaultValue;
+}
+
+function getEnv(name) {
+  let key = createKey(name);
+  return process.env[key];
+}
+
+setEnv('port', 11191);
+
+let config = {
+  self: {
+    port: getEnv('port'),
+    rootPath: rootPath
   }
 };
 
-//457789894432164 - Players6Chat
-//100000127136305 - Taylor
-
-
-//Youtube api key - AIzaSyCgPzEOYKHojKJBeKhom0whM_DGghfH-XM
+console.log(utils.inspect(config));
+module.exports = config;

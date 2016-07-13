@@ -1,17 +1,14 @@
 doctype
 html
     head
-        title Players: 6
+        title CLOSiT
         link(href="/favicon.ico", rel="shortcut icon", type="image/x-icon")
-        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+        link(rel="stylesheet", href="/css/bootstrap.css")
         link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
-        link(rel="stylesheet", href="/vendor/toastr/toastr.css")
-        link(rel="stylesheet", href="/css/animate.css")
-        link(rel="stylesheet", href="/css/stars.css")
-        link(rel="stylesheet", href="/css/style.css")
+        link(rel="stylesheet", href="/css/main.css")
+        link(rel="stylesheet", href="/css/login-register.css")
         meta(name='viewport', content='width=device-width, initial-scale=1')
         base(href="/")
     body(ng-app='app')
-        include currentUser
         block main-content
         include scripts
