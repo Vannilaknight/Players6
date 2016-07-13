@@ -1,17 +1,29 @@
 doctype
 html
     head
-        title Players: 6
+        title Players 6
         link(href="/favicon.ico", rel="shortcut icon", type="image/x-icon")
-        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/reset.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/site.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/container.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/grid.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/header.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/image.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/menu.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/dropdown.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/divider.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/segment.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/list.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/icon.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/button.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/transition.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/sidebar.min.css')
         link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
-        link(rel="stylesheet", href="/vendor/toastr/toastr.css")
-        link(rel="stylesheet", href="/css/animate.css")
-        link(rel="stylesheet", href="/css/stars.css")
-        link(rel="stylesheet", href="/css/style.css")
+        link(rel="stylesheet", href="/css/main.css")
+        link(rel="stylesheet", href="/css/login-register.css")
         meta(name='viewport', content='width=device-width, initial-scale=1')
         base(href="/")
     body(ng-app='app')
-        include currentUser
         block main-content
         include scripts

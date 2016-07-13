@@ -1,37 +1,28 @@
 {
   "name": "players6",
-  "version": "0.0.1",
-  "description": "How many Players? 6",
-  "main": "server.js",
+  "version": "0.1.0",
+  "description": "Players6 Website",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"You can't test greatness.\""
+    "test": "echo write tests please",
+    "start": "node index"
   },
-  "engines": {
-    "node": "0.10.x",
-    "npm": "1.3.x"
-  },
+  "keywords": [
+    "closit",
+    "ui"
+  ],
   "author": "Taylor Boyd",
-  "license": "LicenseRef-LICENSE",
+  "license": "UNLICENSED",
+  "homepage": "https://players6.com",
   "dependencies": {
-    "bluebird": "^3.4.0",
-    "body-parser": "~1.2.0",
-    "cookie-parser": "^1.1.0",
-    "express": "~4.2.0",
-    "express-session": "^1.2.1",
-    "facebook-chat-api": "^1.1.0",
-    "fs": "0.0.2",
-    "jade": "~1.3.1",
-    "jasperboyd": "^1.2.0",
-    "mongoose": "^4",
-    "morgan": "~1.0.1",
-    "passport": "^0.2.0",
-    "passport-local": "^1.0.0",
-    "stylus": "~0.45.0",
-    "youtube-api": "^2.0.2",
-    "youtube-node": "^1.3.0"
-  },
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-bump": "^0.7.0"
+    "assert-plus": "^1.0.0",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.2.0",
+    "express-session": "^1.14.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.7.0",
+    "node-sass": "^3.8.0",
+    "node-sass-middleware": "^0.9.8"
   }
 }
