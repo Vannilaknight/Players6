@@ -8,7 +8,6 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
       templateUrl: '/partials/main/main',
       controller: 'mainCtrl'
     })
-
     .when('/login', {
       templateUrl: '/partials/account/login',
       controller: 'loginCtrl'

@@ -10,12 +10,12 @@ module.exports = function (app, config) {
 
   console.log("ExPRESS");
 
-  app.set('views', config.self.rootPath + '/server/views');
+  app.set('views', config.rootPath + '/server/views');
   app.set('view engine', 'jade');
   app.use(
     sassMiddleware({
-      src: config.self.rootPath + '/public/sass', //where the sass files are
-      dest:  config.self.rootPath + '/public/', //where css should go
+      src: config.rootPath + '/public/sass', //where the sass files are
+      dest:  config.rootPath + '/public/', //where css should go
       debug: true // obvious
     })
   );
@@ -24,5 +24,5 @@ module.exports = function (app, config) {
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(bodyParser.json());
   app.use(session({secret: 'Kevin is a dumbhead', resave: false, saveUninitialized: false}));
-  app.use(express.static(config.self.rootPath + '/public'));
+  app.use(express.static(config.rootPath + '/public'));
 }
