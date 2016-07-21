@@ -1,19 +1,15 @@
-$(document).ready(function () {
-
-  // fix menu when passed
-  $('.masthead')
-    .visibility({
-      once: false,
-      onBottomPassed: function () {
-        $('.fixed.menu').transition('fade in');
-      },
-      onBottomPassedReverse: function () {
-        $('.fixed.menu').transition('fade out');
-      }
+(function ($) {
+  jQuery(document).ready(function () {
+    jQuery('a[data-gal]').each(function () {
+      jQuery(this).attr('rel', jQuery(this).data('gal'));
     });
-
-  // create sidebar and attach to menu open
-  $('.ui.sidebar')
-    .sidebar('attach events', '.toc.item');
-
-});
+    jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({
+      animationSpeed: 'slow',
+      theme: 'light_square',
+      slideshow: false,
+      overlay_gallery: false,
+      social_tools: false,
+      deeplinking: false
+    });
+  });
+})(jQuery);

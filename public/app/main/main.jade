@@ -1,55 +1,39 @@
-.ui.vertical.stripe.segment
-    .ui.middle.aligned.stackable.grid.container
+#headerwrap
+    .container
         .row
-            .eight.wide.column
-                h3.ui.header We Make Youtube Videos
+            .col-lg-8.col-lg-offset-2
+                h1.p6-font Players: 6
+                h5 Best put your seatbelt on
+                h5 cause were going to take you for the ride of your life
+#service
+    .container
+        .row.centered
+            .col-md-6
+                i.fa.fa-heart-o
+                h4 Loveable Crew
                 p
-                    | A group of friends with the ultimate goal of having fun, come together to create an enjoyable experience
-                h3.ui.header We Create Memories
+                    | Our channel features 5 foolhardy, video game enthusiasts that love to just have fun! Except Ambrose. He plays for the achievements. Anyways, Were here to entertain you cause we definitely entertain ourselves!
                 p
-                    | Where else will you hear someone cry at a video game?
-            .six.wide.right.floated.column
-                img.ui.large.bordered.rounded.image(src='../../assets/preview.png')
-        .row
-            .center.aligned.column
-                a.ui.huge.button(href="https://www.youtube.com/channel/UCjug0bQtWqtKERXudtdAPNA", target="_blank") Check Us Out
-.ui.vertical.stripe.quote.segment
-    .ui.equal.width.stackable.internally.celled.grid
-        .center.aligned.row
-            .column
-                h3 "Shit, Shit, Shit, Dick in my ass"
-                p Quality commentary
-            .column
-                h3 "Go Go Gadget Dick!!"
+                    br
+                    a.btn.btn-theme(href='/players') Meet the Players
+            .col-md-6
+                i.fa.fa-trophy
+                h4 Ready for Greatness
                 p
-                    img.ui.avatar.image(src='https://images.unsplash.com/photo-1442120108414-42e7ea50d0b5?fit=crop&fm=jpg&h=725&ixjsv=2.0.0&ixlib=rb-0.3.5&q=80&w=1225')
-                    b Ambrose
-                    |  Achievement Enthusiast
-.ui.vertical.stripe.segment
-    .ui.text.container
-        h3.ui.header Most Popular Videos
-        p
-            | Some of our videos are better than the others. Not that were biased or anything.
-        a.ui.large.button Popular Vids
-        h3.ui.header Have you met the team yet?
-        p
-            | There's Five of us but who's the 6th Player? Find out more on our Players Page!
-        a.ui.large.button Players
-.ui.inverted.vertical.footer.segment
-    .ui.container
-        .ui.stackable.inverted.divided.equal.height.stackable.grid
-            .three.wide.column
-                h4.ui.inverted.header About
-                .ui.inverted.link.list
-                    a.item(href='#') Sitemap
-                    a.item(href='#') Contact Us
-            .three.wide.column
-                h4.ui.inverted.header Services
-                .ui.inverted.link.list
-                    a.item(href='#') Donate
-                    a.item(href='#') P:6 FAQ
-            .seven.wide.column
-                h4.ui.inverted.header Check us out on YouTube
+                    | Some of us tend to say the dumbest things. Thats why we decided to share our stupidity with YouTube! We were born ready to make everyone enjoy our activities just as much as us!
                 p
-                    | We try and create content as often as possible to keep things fresh so stay tuned
-script(type="text/javascript", src="/scripts/main.js")
+                    br
+                    a.btn.btn-theme(href='https://www.youtube.com/channel/UCjug0bQtWqtKERXudtdAPNA', target="_blank") Check us out on YouTube
+#portfoliowrap
+    h3 LATEST VIDEOS
+    .portfolio-centered
+        .recentitems.portfolio
+            .portfolio-item.graphic-design(ng-repeat="video in recentVids")
+                .he-wrap.tpl6
+                    img(src='{{video.snippet.thumbnails.high.url}}', alt='')
+                    .he-view
+                        .bg.a0(data-animate='fadeIn')
+                            h3.a1(data-animate='fadeInDown') {{video.snippet.title}}
+                            a.dmbutton.a2(href='https://www.youtube.com/watch?v={{video.contentDetails.videoId}}', data-animate='fadeInUp')
+                                i.fa.fa-youtube-play
+

@@ -1,45 +1,38 @@
 extends ../includes/layout
 
 block main-content
-    // Following Menu
-    .ui.large.top.fixed.hidden.menu
-        .ui.container
-            a.active.item Home
-            a.item Players
-            a.item Confused?
-            a.item Contact
-            //.right.menu
-            //    .item
-            //        a.ui.button Log in
-            //    .item
-            //        a.ui.primary.button Sign Up
-    // Sidebar Menu
-    .ui.vertical.inverted.sidebar.menu
-        a.active.item Home
-        a.item Players
-        a.item Confused?
-        a.item Contact
-        //a.item Login
-        //a.item Signup
-    // Page Contents
-    .pusher
-        .ui.inverted.vertical.masthead.center.aligned.segment
-            .ui.container
-                .ui.large.secondary.inverted.pointing.menu
-                    a.toc.item
-                        i.sidebar.icon
-                    a.active.item Home
-                    a.item Players
-                    a.item Confused?
-                    a.item Contact
-                    //.right.item
-                    //    a.ui.inverted.button Log in
-                    //    a.ui.inverted.button Sign Up
-            .ui.text.container
-                h1.ui.inverted.header
-                    | Players 6
-                h2 Youtube gaming gone wrong
-                .ui.huge.primary.button
-                    | Get Started
-                    i.right.arrow.icon
-        div(ng-view)
+    .navbar.navbar-default.navbar-fixed-top(role='navigation')
+        .container
+            .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand.p6-font(href='/') PLAYERS: 6
+            .navbar-collapse.collapse.navbar-right
+                ul.nav.navbar-nav
+                    li(ng-class="{active: $route.current.activetab == 'home'}")
+                        a(href='/') HOME
+                    li(ng-class="{active: $route.current.activetab == 'players'}")
+                        a(href='/players') PLAYERS
+                    li(ng-class="{active: $route.current.activetab == 'contact'}")
+                        a(href='/contact') CONTACT
+
+    div(ng-view)
+    #footerwrap
+        .container
+            .row
+                .col-lg-6
+                    h4 About
+                    .hline-w
+                    p
+                        | Just a group of friends getting together to play video games and the like. Subscribe to us on YouTube for more fun.
+                .col-lg-2
+                    h4 Social Links
+                    .hline-w
+                    p
+                        a(href='https://twitter.com/Players6_Actual')
+                            i.fa.fa-twitter
+                        a(href='https://www.youtube.com/channel/UCjug0bQtWqtKERXudtdAPNA')
+                            i.fa.fa-youtube
