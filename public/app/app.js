@@ -6,7 +6,18 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       templateUrl: '/partials/main/main',
-      controller: 'mainCtrl'
+      controller: 'mainCtrl',
+      activetab: 'home'
+    })
+    .when('/players', {
+      templateUrl: '/partials/main/players',
+      controller: 'playersCtrl',
+      activetab: 'players'
+    })
+    .when('/contact', {
+      templateUrl: '/partials/main/contact',
+      controller: 'contactCtrl',
+      activetab: 'contact'
     })
     .when('/login', {
       templateUrl: '/partials/account/login',
