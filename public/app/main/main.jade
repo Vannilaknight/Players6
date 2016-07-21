@@ -24,16 +24,9 @@
                 p
                     br
                     a.btn.btn-theme(href='https://www.youtube.com/channel/UCjug0bQtWqtKERXudtdAPNA', target="_blank") Check us out on YouTube
-#portfoliowrap
-    h3 LATEST VIDEOS
-    .portfolio-centered
-        .recentitems.portfolio
-            .portfolio-item.graphic-design(ng-repeat="video in recentVids")
-                .he-wrap.tpl6
-                    img(src='{{video.snippet.thumbnails.high.url}}', alt='')
-                    .he-view
-                        .bg.a0(data-animate='fadeIn')
-                            h3.a1(data-animate='fadeInDown') {{video.snippet.title}}
-                            a.dmbutton.a2(href='https://www.youtube.com/watch?v={{video.contentDetails.videoId}}', data-animate='fadeInUp')
-                                i.fa.fa-youtube-play
+.container-fluid.recent-vids
+    .col-xs-12.col-md-3(ng-repeat="vid in recentVids")
+        img.img-responsive.center-block(src="{{vid.snippet.thumbnails.medium.url}}")
+        h2.text-center {{vid.snippet.title}}
+        a.btn.btn-theme.center-block(target="_blank", href="https://www.youtube.com/watch?v={{vid.contentDetails.videoId}}") Watch on YouTube
 
