@@ -19,20 +19,5 @@ block main-content
                     li(ng-class="{active: $route.current.activetab == 'contact'}")
                         a(href='/contact') CONTACT
 
-    div(ng-view)
-    #footerwrap
-        .container
-            .row
-                .col-lg-6
-                    h4 About
-                    .hline-w
-                    p
-                        | Just a group of friends getting together to play video games and the like. Subscribe to us on YouTube for more fun.
-                .col-lg-2
-                    h4 Social Links
-                    .hline-w
-                    p
-                        a(href='https://twitter.com/Players6_Actual')
-                            i.fa.fa-twitter
-                        a(href='https://www.youtube.com/channel/UCjug0bQtWqtKERXudtdAPNA')
-                            i.fa.fa-youtube
+    div.page(ng-view)
+

@@ -27,6 +27,10 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
       templateUrl: '/partials/account/signup',
       controller: 'signupCtrl'
     })
+    .when('/holly', {
+      templateUrl: '/partials/main/misc',
+      controller: 'miscCtrl'
+    })
 });
 
 angular.module('app').run(function ($rootScope, $location) {

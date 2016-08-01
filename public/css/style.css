@@ -373,3 +373,7 @@ csmall2 {
 
 .recent-vids {
   margin-bottom: 50px; }
+
+.page {
+  min-height: 100%;
+  height: auto; }
