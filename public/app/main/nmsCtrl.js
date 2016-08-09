@@ -117,11 +117,4 @@ angular.module('app').controller('nmsCtrl', function ($scope, $interval) {
 
   var deadline = new Date("August 8, 2016 22:00:00");
   initializeClock(deadline);
-
-  var myAudio = new Audio('../../assets/sounds/Theme.mp3');
-  myAudio.addEventListener('ended', function () {
-    this.currentTime = 0;
-    this.play();
-  }, false);
-  myAudio.play();
 });
