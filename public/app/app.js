@@ -31,6 +31,10 @@ angular.module('app').config(function ($routeProvider, $locationProvider) {
       templateUrl: '/partials/main/misc',
       controller: 'miscCtrl'
     })
+    .when('/nms', {
+      templateUrl: '/partials/main/nms',
+      controller: 'nmsCtrl'
+    })
 });
 
 angular.module('app').run(function ($rootScope, $location) {

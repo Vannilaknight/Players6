@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "No Mans Sky";
+  src: url(../assets/fonts/nms.ttf);
+}
+
+#clockdiv {
+  text-align: center;
+  font-family: "No Mans Sky";
+  font-weight: 100;
+  color: #F3CE59;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+
+  > div {
+    padding: 10px;
+    display: inline-block;
+    background: rgba(52, 139, 133, 0.7);
+  }
+  div > span {
+    padding: 15px;
+    border-radius: 3px;
+    background: rgba(115, 42, 74, 1);
+    display: inline-block;
+  }
+}
+
+.smalltext {
+  padding-top: 5px;
+  font-size: 16px;
+}
